@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Co. — Specialty Coffee Roasted with Passion</title>
+  <meta name="description" content="Where every cup tells a story. Specialty coffee roasted with passion, served with soul. Find your moment at Brew & Co.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATION
+       ══════════════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">Brew<span>&</span>Co.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="admin-link"><a href="admin.html">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO SECTION
+       ══════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">Premium Coffee Experience</div>
+        <h1 class="hero-headline" id="heroHeadline">
+          Where Every Cup<br>Tells a <em>Story</em>
+        </h1>
+        <p class="hero-subtitle" id="heroSubtitle">
+          Specialty coffee roasted with passion, served with soul. Find your moment at Brew & Co.
+        </p>
+        <div class="hero-actions">
+          <a href="#products"><button class="btn-primary" id="heroCta">Explore Our Menu</button></a>
+          <a href="contact.html"><button class="btn-outline">Visit Us</button></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80" alt="Fresh coffee" class="hero-card-img">
+          <div class="hero-card-stats">
+            <div class="stat">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Organic</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">14</div>
+              <div class="stat-label">Origins</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">12+</div>
+              <div class="stat-label">Years</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll<span></span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       ABOUT SECTION
+       ══════════════════════════════════════════════════════ -->
+  <section class="about-section reveal" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-image-stack reveal">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80" alt="Coffee brewing" class="about-img-main">
+          <div class="about-img-badge">
+            <span class="big">14</span>
+            <span class="small">Countries</span>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title" id="aboutTitle">Crafted with Passion</h2>
+          <div class="section-divider"></div>
+          <div id="aboutText">
+            <p>Born from a single obsession — the perfect cup — Brew & Co. has been a gathering place for coffee lovers since 2012. We source directly from small-batch farms across Ethiopia, Colombia, and Guatemala, roasting in-house to honor each bean's origin.</p>
+            <p>Our baristas aren't just staff; they're craftspeople dedicated to precision and warmth. Whether you're chasing your morning ritual or a slow Saturday afternoon, we pour our hearts into every cup.</p>
+            <p>Step in. Slow down. Taste the difference.</p>
+          </div>
+          <div class="about-features">
+            <div class="feature-pill">☕ Small-batch roasting</div>
+            <div class="feature-pill">🌱 Direct trade only</div>
+            <div class="feature-pill">🎯 Single-origin focus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       PRODUCTS / MENU SECTION
+       ══════════════════════════════════════════════════════ -->
+  <section class="products-section" id="products">
+    <div class="section-inner">
+      <div class="products-header reveal">
+        <div>
+          <span class="section-label">Our Menu</span>
+          <h2 class="section-title">Signature Brews</h2>
+          <div class="section-divider"></div>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- Loaded dynamically via main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       TESTIMONIALS SECTION
+       ══════════════════════════════════════════════════════ -->
+  <section class="testimonials-section">
+    <div class="section-inner">
+      <div class="text-center reveal">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="section-divider" style="margin: 1.5rem auto 3rem;"></div>
+      </div>
+      <div class="testimonials-grid" id="testimonialsWrap">
+        <!-- Loaded dynamically via main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">Brew<span>&</span>Co.</div>
+        <p class="footer-tagline">Where every cup tells a story. Serving specialty coffee since 2012.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="Facebook">👍</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li class="footer-contact-item">📍 <span id="footerAddress">42 Maple Street, Brooklyn, NY 11201</span></li>
+          <li class="footer-contact-item">📞 <span id="footerPhone">+1 (555) 234-5678</span></li>
+          <li class="footer-contact-item">✉️ <span id="footerEmail">hello@brewandco.com</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footerText">© 2026 Brew & Co. All rights reserved. Made with ☕ and love.</p>
+      <p><a href="admin.html" style="color: var(--text-muted);">Admin Login</a></p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCRIPTS
+       ══════════════════════════════════════════════════════ -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

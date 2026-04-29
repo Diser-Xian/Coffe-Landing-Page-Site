@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — Brew & Co.</title>
+  <meta name="description" content="Manage your coffee shop content">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       LOGIN SCREEN
+       ══════════════════════════════════════════════════════ -->
+  <div id="adminLogin">
+    <div class="login-card">
+      <div class="login-header">
+        <div class="login-logo">Brew<span style="color: var(--text);">&</span>Co.</div>
+        <p class="login-subtitle">Admin Panel</p>
+      </div>
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn-primary">Login</button>
+        <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 1rem;">
+          Hint: default password is <code style="background: var(--bg-2); padding: 0.15rem 0.4rem; border-radius: 3px;">admin123</code>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       ADMIN DASHBOARD
+       ══════════════════════════════════════════════════════ -->
+  <div id="adminDashboard">
+    <!-- Header -->
+    <div class="admin-header">
+      <h1>Brew & Co. Admin</h1>
+      <div class="admin-header-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <div class="admin-container">
+      <!-- Sidebar Navigation -->
+      <aside class="admin-sidebar">
+        <nav class="admin-tabs">
+          <button class="admin-tab-btn" data-tab="contentPanel" data-icon="📝">Content</button>
+          <button class="admin-tab-btn" data-tab="eventsPanel" data-icon="🎉">Events</button>
+          <button class="admin-tab-btn" data-tab="productsPanel" data-icon="☕">Products</button>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="admin-main">
+
+        <!-- ──────────────────────────────────────────────
+             CONTENT PANEL
+             ────────────────────────────────────────────── -->
+        <div class="admin-panel" id="contentPanel">
+          <div class="admin-panel-header">
+            <div>
+              <h2>Website Content</h2>
+              <p>Manage text, headlines, and settings across all pages</p>
+            </div>
+          </div>
+
+          <form id="settingsForm">
+            <!-- Hero Section -->
+            <div class="admin-form-section">
+              <h3>🏠 Hero Section</h3>
+              <div class="form-group">
+                <label for="set_heroHeadline">Headline</label>
+                <input type="text" id="set_heroHeadline" placeholder="Where Every Cup Tells a Story">
+              </div>
+              <div class="form-group">
+                <label for="set_heroSubtitle">Subtitle</label>
+                <textarea id="set_heroSubtitle" rows="2" placeholder="Specialty coffee roasted with passion..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="set_heroCta">Call-to-Action Button Text</label>
+                <input type="text" id="set_heroCta" placeholder="Explore Our Menu">
+              </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="admin-form-section">
+              <h3>📖 About Section</h3>
+              <div class="form-group">
+                <label for="set_aboutTitle">Section Title</label>
+                <input type="text" id="set_aboutTitle" placeholder="Our Story">
+              </div>
+              <div class="form-group">
+                <label for="set_aboutText">About Text (use double line breaks for paragraphs)</label>
+                <textarea id="set_aboutText" rows="8" placeholder="Born from a single obsession..."></textarea>
+              </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="admin-form-section">
+              <h3>📞 Contact Information</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="set_phone">Phone Number</label>
+                  <input type="text" id="set_phone" placeholder="+1 (555) 234-5678">
+                </div>
+                <div class="form-group">
+                  <label for="set_email">Email Address</label>
+                  <input type="email" id="set_email" placeholder="hello@brewandco.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="set_address">Physical Address</label>
+                <input type="text" id="set_address" placeholder="42 Maple Street, Brooklyn, NY 11201">
+              </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="admin-form-section">
+              <h3>🗺️ Google Maps</h3>
+              <div class="form-group">
+                <label for="set_mapEmbed">Google Maps Embed URL</label>
+                <input type="url" id="set_mapEmbed" placeholder="https://www.google.com/maps/embed?pb=...">
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
+                  Go to Google Maps → Share → Embed a map → Copy the URL from the iframe src
+                </p>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="admin-form-section">
+              <h3>🔻 Footer</h3>
+              <div class="form-group">
+                <label for="set_footerText">Footer Text</label>
+                <input type="text" id="set_footerText" placeholder="© 2026 Brew & Co. All rights reserved.">
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" id="resetSettings" class="btn-secondary">Reset to Defaults</button>
+              <button type="submit" class="btn-primary">Save All Changes</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ──────────────────────────────────────────────
+             EVENTS PANEL
+             ────────────────────────────────────────────── -->
+        <div class="admin-panel" id="eventsPanel">
+          <div class="admin-panel-header">
+            <div>
+              <h2>Events Management</h2>
+              <p>Add, edit, or remove upcoming events</p>
+            </div>
+            <button class="btn-add" id="addEventBtn">+ Add Event</button>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Event Name</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="eventsTableBody">
+                <!-- Loaded dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ──────────────────────────────────────────────
+             PRODUCTS PANEL
+             ────────────────────────────────────────────── -->
+        <div class="admin-panel" id="productsPanel">
+          <div class="admin-panel-header">
+            <div>
+              <h2>Menu Products</h2>
+              <p>Manage featured coffee products</p>
+            </div>
+            <button class="btn-add" id="addProductBtn">+ Add Product</button>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Description</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="productsTableBody">
+                <!-- Loaded dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       EVENT MODAL
+       ══════════════════════════════════════════════════════ -->
+  <div class="modal" id="eventModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="eventModalTitle">New Event</h3>
+      </div>
+      <form id="eventForm">
+        <input type="hidden" id="ev_id">
+        <div class="form-group">
+          <label for="ev_title">Event Title *</label>
+          <input type="text" id="ev_title" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ev_date">Date *</label>
+            <input type="date" id="ev_date" required>
+          </div>
+          <div class="form-group">
+            <label for="ev_time">Time</label>
+            <input type="text" id="ev_time" placeholder="7:00 PM">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ev_description">Description</label>
+          <textarea id="ev_description" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="ev_image">Image URL</label>
+          <input type="url" id="ev_image" placeholder="https://...">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="cancelEvent">Cancel</button>
+          <button type="submit" class="btn-primary">Save Event</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PRODUCT MODAL
+       ══════════════════════════════════════════════════════ -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="productModalTitle">New Product</h3>
+      </div>
+      <form id="productForm">
+        <input type="hidden" id="pr_id">
+        <div class="form-group">
+          <label for="pr_name">Product Name *</label>
+          <input type="text" id="pr_name" required>
+        </div>
+        <div class="form-group">
+          <label for="pr_price">Price *</label>
+          <input type="text" id="pr_price" placeholder="$4.50" required>
+        </div>
+        <div class="form-group">
+          <label for="pr_description">Description</label>
+          <textarea id="pr_description" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pr_image">Image URL</label>
+          <input type="url" id="pr_image" placeholder="https://...">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="cancelProduct">Cancel</button>
+          <button type="submit" class="btn-primary">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCRIPTS
+       ══════════════════════════════════════════════════════ -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
