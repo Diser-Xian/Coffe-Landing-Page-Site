@@ -720,15 +720,16 @@ section { padding: 6rem 2rem; }
   .nav-links {
     display: none;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 78px; left: 0; right: 0; bottom: 0;
     background: var(--bg-2);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
+    justify-content: start;
+    align-items: start;
+    padding: 1rem;
+    gap: 1.5rem;
     z-index: 99;
   }
-  .nav-links.open { display: flex; }
+  .nav-links.open { display: flex;}
   .nav-links a { font-size: 1.2rem; }
 
   .hero-content { grid-template-columns: 1fr; gap: 3rem; padding: 6rem 1.5rem 3rem; }

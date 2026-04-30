@@ -252,7 +252,7 @@ function loadContactPage() {
       }
 
       // Send email using EmailJS
-      emailjs.send('service_je44uxa', 'template_81eyjbn', {
+      emailjs.send('service_je44uxa', 'template_p57a5pb', {
         from_name: name,
         from_email: email,
         message: msg,
