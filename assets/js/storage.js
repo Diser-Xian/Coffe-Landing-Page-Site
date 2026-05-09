@@ -9,7 +9,7 @@ const DEFAULT_EVENTS = [
     date: "2026-05-10",
     time: "9:00 AM",
     description: "Learn the art of pour-over brewing from our head barista. All equipment provided. Limited to 12 participants.",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80"
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=520&q=60"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const DEFAULT_EVENTS = [
     date: "2026-05-17",
     time: "7:00 PM",
     description: "Sip specialty blends while local jazz musicians set the mood. Reservations recommended.",
-    image: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=600&q=80"
+    image: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28?w=520&q=60"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const DEFAULT_EVENTS = [
     date: "2026-05-24",
     time: "2:00 PM",
     description: "Compete or spectate as our baristas and guests battle for the best latte art. Prizes for top 3!",
-    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80"
+    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=520&q=60"
   }
 ];
 
